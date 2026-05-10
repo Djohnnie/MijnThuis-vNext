@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.7" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\MijnThuis.Application\MijnThuis.Application.csproj" />
+		<ProjectReference Include="..\MijnThuis.Infrastructure.Sql\MijnThuis.Infrastructure.Sql.csproj" />
+		<ProjectReference Include="..\..\aspire\MijnThuis.ServiceDefaults\MijnThuis.ServiceDefaults.csproj" />
+	</ItemGroup>
+
+</Project>

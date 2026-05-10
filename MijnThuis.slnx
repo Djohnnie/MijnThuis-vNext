@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/aspire/">
+    <Project Path="aspire/MijnThuis.AppHost/MijnThuis.AppHost.csproj" />
+    <Project Path="aspire/MijnThuis.ServiceDefaults/MijnThuis.ServiceDefaults.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/MijnThuis.Api/MijnThuis.Api.csproj" />
+    <Project Path="src/MijnThuis.Application/MijnThuis.Application.csproj" />
+    <Project Path="src/MijnThuis.Domain/MijnThuis.Domain.csproj" />
+    <Project Path="src/MijnThuis.Infrastructure.Sql/MijnThuis.Infrastructure.Sql.csproj" />
+    <Project Path="src/MijnThuis.Web/MijnThuis.Web.csproj" />
+    <Project Path="src/MijnThuis.Worker/MijnThuis.Worker.csproj" />
+  </Folder>
+</Solution>
