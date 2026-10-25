@@ -409,6 +409,7 @@ FodyWeavers.xsd
 
 # Launch settings are machine-specific
 **/Properties/launchSettings.json
+!aspire/MijnThuis.AppHost/Properties/launchSettings.json
 
 # VS Code files for those working on multiple tools
 .vscode/*
