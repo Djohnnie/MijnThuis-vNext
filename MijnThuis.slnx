@@ -8,7 +8,12 @@
     <Project Path="src/MijnThuis.Application/MijnThuis.Application.csproj" />
     <Project Path="src/MijnThuis.Domain/MijnThuis.Domain.csproj" />
     <Project Path="src/MijnThuis.Infrastructure.Sql/MijnThuis.Infrastructure.Sql.csproj" />
+    <Project Path="src/MijnThuis.Integrations/MijnThuis.Integrations.csproj" />
+    <Project Path="src/MijnThuis.Integrations.CLI/MijnThuis.Integrations.CLI.csproj" />
     <Project Path="src/MijnThuis.Web/MijnThuis.Web.csproj" />
     <Project Path="src/MijnThuis.Worker/MijnThuis.Worker.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/MijnThuis.Integrations.Tests/MijnThuis.Integrations.Tests.csproj" />
   </Folder>
 </Solution>
