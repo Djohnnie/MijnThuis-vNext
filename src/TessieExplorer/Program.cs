@@ -23,10 +23,16 @@ if (File.Exists("appsettings.Development.json"))
     }
 }
 
-if (string.IsNullOrWhiteSpace(token) || string.IsNullOrWhiteSpace(vin) ||
+if (string.IsNullOrWhiteSpace(token) || token.Any(char.IsWhiteSpace) || string.IsNullOrWhiteSpace(vin) ||
     !Regex.IsMatch(vin, "^[A-HJ-NPR-Z0-9]{17}$", RegexOptions.IgnoreCase))
 {
     AnsiConsole.MarkupLine("[red]Configure a Tessie token and a valid 17-character VIN first. See README.[/]");
+    return;
+}
+
+if (!AnsiConsole.Profile.Capabilities.Interactive)
+{
+    AnsiConsole.MarkupLine("[red]An interactive terminal is required for the menu.[/]");
     return;
 }
 

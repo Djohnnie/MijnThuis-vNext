@@ -50,10 +50,10 @@ public sealed class VehiclePresenter
         new("Odometer", "odometer", "km"),
         new("Energy added", "energy_added", "kWh"),
         new("Energy used", "energy_used", "kWh"),
-        new("Range added", "range_added", "km"),
+        new("Range added", "miles_added", "km"),
         new("Starting battery", "starting_battery", "%"),
         new("Ending battery", "ending_battery", "%"),
-        new("Distance since last charge", "distance_since_last_charge", "km")
+        new("Distance since last charge", "since_last_charge", "km")
     ];
 
     private static readonly Field[] DriveFields =
