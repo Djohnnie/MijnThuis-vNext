@@ -22,7 +22,7 @@ This file is ignored by Git. Alternatively, set `TESSIE_TOKEN` and `TESSIE_VIN`
 environment variables; these take precedence over the file. Never commit credentials.
 
 ```sh
-dotnet run --project src/TessieExplorer/TessieExplorer.csproj
+dotnet run --project pocs/TessieExplorer/TessieExplorer.csproj
 ```
 
 Run the menu in an interactive terminal. Select one data category or all categories
@@ -35,6 +35,6 @@ fields are labelled rather than inferred.
 Build and run the offline tests (no Tessie account is required):
 
 ```sh
-dotnet build src/TessieExplorer/TessieExplorer.csproj
+dotnet build pocs/TessieExplorer/TessieExplorer.csproj
 dotnet run --project tests/TessieExplorer.Tests/TessieExplorer.Tests.csproj
 ```

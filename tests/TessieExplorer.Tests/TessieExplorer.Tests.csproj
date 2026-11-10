@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\TessieExplorer\TessieExplorer.csproj" />
+    <ProjectReference Include="..\..\pocs\TessieExplorer\TessieExplorer.csproj" />
   </ItemGroup>
 
   <ItemGroup>
