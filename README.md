@@ -32,7 +32,7 @@ timeframe and result limits; they do not necessarily represent all historical
 records. Timestamps are shown in the computer's local timezone. Unavailable
 fields are labelled rather than inferred.
 
-Build and run the offline tests (no Tessie account is required):
+Build and run the offline xUnit and Reqnroll behavior tests (no Tessie account is required):
 
 ```sh
 dotnet build pocs/TessieExplorer/TessieExplorer.csproj

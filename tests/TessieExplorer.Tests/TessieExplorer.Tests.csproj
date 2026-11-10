@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Reqnroll.xunit.v3" Version="3.3.4" />
     <PackageReference Include="xunit.v3" Version="4.0.3" />
   </ItemGroup>
 

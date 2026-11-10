@@ -432,3 +432,4 @@ FodyWeavers.xsd
 *.msm
 *.msp
 appsettings.Development.json
+*.feature.cs
