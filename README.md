@@ -18,8 +18,14 @@ From the repository root, create a local `appsettings.Development.json`:
 }
 ```
 
-This file is ignored by Git. Alternatively, set `TESSIE_TOKEN` and `TESSIE_VIN`
-environment variables; these take precedence over the file. Never commit credentials.
+Configuration is loaded from the working directory: optional `appsettings.json`,
+then optional `appsettings.Development.json`, and then environment variables.
+Later sources override earlier ones per setting. The development file is ignored
+by Git; do not put credentials in the tracked `appsettings.json`.
+
+Use the standard `Tessie__Token` and `Tessie__Vin` environment variables, or
+the existing `TESSIE_TOKEN` and `TESSIE_VIN` aliases. The aliases take precedence
+over the standard names when both are set. Never commit credentials.
 
 ```sh
 dotnet run --project pocs/TessieExplorer/TessieExplorer.csproj

@@ -3,26 +3,19 @@ using System.Text.RegularExpressions;
 using Spectre.Console;
 using TessieExplorer;
 
-string? token = Environment.GetEnvironmentVariable("TESSIE_TOKEN");
-string? vin = Environment.GetEnvironmentVariable("TESSIE_VIN");
-if (File.Exists("appsettings.Development.json"))
+ExplorerConfiguration settings;
+try
 {
-    try
-    {
-        using var settings = JsonDocument.Parse(File.ReadAllText("appsettings.Development.json"));
-        if (settings.RootElement.TryGetProperty("Tessie", out var tessie))
-        {
-            token ??= tessie.TryGetProperty("Token", out var t) ? t.GetString() : null;
-            vin ??= tessie.TryGetProperty("Vin", out var v) ? v.GetString() : null;
-        }
-    }
-    catch (Exception ex) when (ex is IOException or JsonException or InvalidOperationException)
-    {
-        AnsiConsole.MarkupLine("[red]Could not read appsettings.Development.json.[/]");
-        return;
-    }
+    settings = ExplorerConfiguration.Load(Directory.GetCurrentDirectory());
+}
+catch (Exception ex) when (ex is IOException or InvalidDataException or UnauthorizedAccessException or FormatException)
+{
+    AnsiConsole.MarkupLine("[red]Could not read application settings. Check the appsettings JSON files.[/]");
+    return;
 }
 
+var token = settings.Token;
+var vin = settings.Vin;
 if (string.IsNullOrWhiteSpace(token) || token.Any(char.IsWhiteSpace) || string.IsNullOrWhiteSpace(vin) ||
     !Regex.IsMatch(vin, "^[A-HJ-NPR-Z0-9]{17}$", RegexOptions.IgnoreCase))
 {
