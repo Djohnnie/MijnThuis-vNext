@@ -32,9 +32,13 @@ timeframe and result limits; they do not necessarily represent all historical
 records. Timestamps are shown in the computer's local timezone. Unavailable
 fields are labelled rather than inferred.
 
-Build and run the offline xUnit and Reqnroll behavior tests (no Tessie account is required):
+The `pocs/Pocs.slnx` solution groups each POC and its tests in a descriptive
+solution folder. Add future POCs to their own solution folders.
+
+Build the POC solution and run the offline xUnit and Reqnroll behavior tests
+(no Tessie account is required):
 
 ```sh
-dotnet build pocs/TessieExplorer/TessieExplorer.csproj
-dotnet run --project tests/TessieExplorer.Tests/TessieExplorer.Tests.csproj
+dotnet build pocs/Pocs.slnx
+dotnet run --project pocs/TessieExplorer/TessieExplorer.Tests/TessieExplorer.Tests.csproj
 ```
