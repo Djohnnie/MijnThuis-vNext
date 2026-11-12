@@ -7,7 +7,13 @@ The read-only console requires the .NET 11 SDK, a Tessie access token from
 [Tessie developer settings](https://developer.tessie.com/), and the VIN of a
 vehicle accessible to that account. It does not send vehicle commands.
 
-From the repository root, create a local `appsettings.Development.json`:
+From the repository root, copy the checked-in template and set your local values:
+
+```sh
+cp pocs/TessieExplorer/appsettings.json pocs/TessieExplorer/appsettings.Development.json
+```
+
+`pocs/TessieExplorer/appsettings.Development.json`:
 
 ```json
 {
@@ -28,7 +34,8 @@ the existing `TESSIE_TOKEN` and `TESSIE_VIN` aliases. The aliases take precedenc
 over the standard names when both are set. Never commit credentials.
 
 ```sh
-dotnet run --project pocs/TessieExplorer/TessieExplorer.csproj
+cd pocs/TessieExplorer
+dotnet run
 ```
 
 Run the menu in an interactive terminal. Select one data category or all categories
@@ -41,10 +48,10 @@ fields are labelled rather than inferred.
 The `pocs/Pocs.slnx` solution groups each POC and its tests in a descriptive
 solution folder. Add future POCs to their own solution folders.
 
-Build the POC solution and run the offline xUnit and Reqnroll behavior tests
-(no Tessie account is required):
+From the repository root, build the POC solution and run the offline xUnit and
+Reqnroll behavior tests (no Tessie account is required):
 
 ```sh
 dotnet build pocs/Pocs.slnx
-dotnet run --project pocs/TessieExplorer/TessieExplorer.Tests/TessieExplorer.Tests.csproj
+dotnet run --project pocs/TessieExplorer.Tests/TessieExplorer.Tests.csproj
 ```

@@ -1,6 +1,6 @@
 <Solution>
   <Folder Name="/Tesla Model Y - Tessie Explorer/">
     <Project Path="TessieExplorer/TessieExplorer.csproj" />
-    <Project Path="TessieExplorer/TessieExplorer.Tests/TessieExplorer.Tests.csproj" />
+    <Project Path="TessieExplorer.Tests/TessieExplorer.Tests.csproj" />
   </Folder>
 </Solution>
